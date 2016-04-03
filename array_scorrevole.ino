@@ -4,7 +4,7 @@ int inByte = 0;
 char compassOsd[] = "s - - se - - e - - ne - - n - - no - - o - - so - - ";
 char actualCompassOsd[] = "                    ";
 char posizione [] = {-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
- int conto = 0;
+
 void setup()
 {
 Serial.begin(9600);
@@ -28,12 +28,8 @@ if (Serial.available() > 0) {
       }
    
     Serial.println(actualCompassOsd);
-   
-    Serial.print("conto = ");
-    Serial.println(conto);
-    conto ++;
+
     Serial.read();
-    Serial.read();
-    Serial.read();
+
     }
 }
